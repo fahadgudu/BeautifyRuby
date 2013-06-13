@@ -1,3 +1,17 @@
+- name: not indent after calling private in a class
+  input: |
+    class Bla
+      private
+        def some_method
+        end
+    end
+  output: |
+    class Bla
+      private
+      def some_method
+      end
+    end
+
 - name: indent if else end statement
   input: |
     if foo
